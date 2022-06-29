@@ -18,15 +18,15 @@
       
           <p class="menu-label"> Pessoas </p>
           <ul class="menu-list">
-            <li><a>Paciente</a></li>
-            <li><a>Médico</a></li>
-            <li><a>Secretaria</a></li>
+            <li><router-link to="/paciente">Paciente</router-link></li>
+            <li><router-link to="/medico">Médico</router-link></li>
+            <li><router-link to="/secretaria">Secretaria</router-link></li>
           </ul>
 
           <p class="menu-label"> Administração </p>
           <ul class="menu-list">
-            <li><a>Especialidade</a></li>
-            <li><a>Convênio</a></li>
+            <li><router-link to="/especialidade">Especialidade</router-link></li>
+            <li><router-link to="/convenio">Convênio</router-link></li>
           </ul>
         </aside>
       </nav>

@@ -16,18 +16,18 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/secretarias',
-    name: 'secretarias',
+    path: '/secretaria',
+    name: 'secretaria',
     component: () => import(/* webpackChunkName: "about" */ '../views/secretaria/secretaria-list.vue')
   },
   {
-    path: '/pacientes',
-    name: 'pacientes',
+    path: '/paciente',
+    name: 'paciente',
     component: () => import(/* webpackChunkName: "about" */ '../views/paciente/paciente-list.vue')
   },
   {
-    path: '/medicos',
-    name: 'medicos',
+    path: '/medico',
+    name: 'medico',
     component: () => import(/* webpackChunkName: "about" */ '../views/medico/medico-list.vue')
   },
   {
@@ -36,13 +36,13 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/historico/historico-list.vue')
   },
   {
-    path: '/especialidades',
-    name: 'especialidades',
+    path: '/especialidade',
+    name: 'especialidade',
     component: () => import(/* webpackChunkName: "about" */ '../views/especialidade/especialidade-list.vue')
   },
   {
-    path: '/convenios',
-    name: 'convenios',
+    path: '/convenio',
+    name: 'convenio',
     component: () => import(/* webpackChunkName: "about" */ '../views/convenio/convenio-list.vue')
   },
   {
