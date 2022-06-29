@@ -35,7 +35,7 @@
                     <th>1</th>
                     <td>Layal Al Wanni</td>
                     <td>013.956.229-06</td>
-                    <td><button class="button is-responsive is-rounded is-info is-light">Detalhar</button></td>
+                    <td><button class="button is-responsive is-rounded is-info is-light"><router-link to="/secretaria-detalhar">Detalhar</router-link></button></td>
                 </tr>
                 <tr>
                     <th>2</th>
@@ -60,8 +60,6 @@
         </table>
 
     </div>
-
-
 
 </template>
 
