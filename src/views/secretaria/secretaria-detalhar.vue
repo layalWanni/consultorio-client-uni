@@ -1,9 +1,9 @@
 <template>
-    <div class="convenio">
+    <div class="secretaria">
 
         <article class="panel is-info">
             <p class="panel-heading">
-                LISTA DE CONVÊNIOS
+                DETALHAMENTO DA SECRETÁRIA
             </p>
             <div class="panel-block">
                 <p class="control has-icons-left">
@@ -16,7 +16,7 @@
         </article>
         <div class="buttonCadastrar">
             <button class="button is-responsive is-rounded is-info is-light">
-                Cadastrar novo Convênio
+                Cadastrar nova Secretária
             </button>
 
         </div>
@@ -26,28 +26,33 @@
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
+                    <th>PIS</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
                     <th>1</th>
-                    <td>Itamed</td>
+                    <td>Layal Al Wanni</td>
+                    <td>013.956.229-06</td>
                     <td><button class="button is-responsive is-rounded is-info is-light">Detalhar</button></td>
                 </tr>
                 <tr>
                     <th>2</th>
-                    <td>Unimed</td>
+                    <td>Paulo Khensane</td>
+                    <td>011.345.346-65</td>
                     <td><button class="button is-responsive is-rounded is-info is-light">Detalhar</button></td>
                 </tr>
                 <tr>
                     <th>3</th>
-                    <td>SUS</td>
-                     <td><button class="button is-responsive is-rounded is-info is-light">Detalhar</button></td>
+                    <td>Pedro Costa</td>
+                    <td>067.553.039-33</td>
+                    <td><button class="button is-responsive is-rounded is-info is-light">Detalhar</button></td>
                 </tr>
                 <tr>
                     <th>4</th>
-                    <td>Sicred</td>
+                    <td>Vinicius Frasson</td>
+                    <td>123.087.734-44</td>
                     <td><button class="button is-responsive is-rounded is-info is-light">Detalhar</button></td>
                 </tr>
             </tbody>
