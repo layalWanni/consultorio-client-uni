@@ -21,49 +21,19 @@ const routes: Array<RouteRecordRaw> = [
     name: 'secretaria',
     component: () => import(/* webpackChunkName: "about" */ '../views/secretaria/secretaria-list.vue')
   },
-  {
-    path: '/secretaria-detalhar',
-    name: 'secretaria-detalhar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/secretaria/secretaria-detalhar.vue')
-  },
-  {
-    path: '/secretaria-cadastrar',
-    name: 'secretaria-cadastrar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/secretaria/secretaria-cadastrar.vue')
-  },
 
   {
     path: '/paciente',
     name: 'paciente',
     component: () => import(/* webpackChunkName: "about" */ '../views/paciente/paciente-list.vue')
   },
-  {
-    path: '/paciente-detalhar',
-    name: 'paciente-detalhar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/paciente/paciente-detalhar.vue')
-  },
-  {
-    path: '/paciente-cadastrar',
-    name: 'paciente-cadastrar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/paciente/paciente-cadastrar.vue')
-  },
+
 
   {
     path: '/medico',
     name: 'medico',
     component: () => import(/* webpackChunkName: "about" */ '../views/medico/medico-list.vue')
   },
-  {
-    path: '/medico-detalhar',
-    name: 'medico-detalhar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/medico/medico-detalhar.vue')
-  },
-  {
-    path: '/medico-cadastrar',
-    name: 'medico-cadastrar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/medico/medico-cadastrar.vue')
-  },
-
   {
     path: '/historicos',
     name: 'historicos',
@@ -76,31 +46,24 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/especialidade/especialidade-list.vue')
   },
   {
-    path: '/especialidade-detalhar',
-    name: 'especialidade-detalhar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/especialidade/especialidade-detalhar.vue')
+    path: '/especialidade/formulario',
+    name: 'especialidade-cadastrar',
+    component: () => import(/* webpackChunkName: "form" */ '../views/especialidade/especialidade-form.vue')
   },
   {
-    path: '/especialidade-cadastrar',
-    name: 'especialidade-cadastrar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/especialidade/especialidade-cadastrar.vue')
+    path: '/especialidade/formulario/:model/:id',
+    name: 'especialidade-detalhar',
+    props: (router) => ({ id: router.params.id, model: router.params.model }),
+    component: () => import(/* webpackChunkName: "form" */ '../views/especialidade/especialidade-form.vue')
   },
+
 
   {
     path: '/convenio',
     name: 'convenio',
     component: () => import(/* webpackChunkName: "about" */ '../views/convenio/convenio-list.vue')
   },
-  {
-    path: '/convenio-detalhar',
-    name: 'convenio-detalhar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/convenio/convenio-detalhar.vue')
-  },
-  {
-    path: '/convenio-cadastrar',
-    name: 'convenio-cadastrar',
-    component: () => import(/* webpackChunkName: "about" */ '../views/convenio/convenio-cadastrar.vue')
-  },
+
 
   {
     path: '/agendamentos',
