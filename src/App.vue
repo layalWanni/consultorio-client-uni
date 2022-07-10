@@ -1,5 +1,4 @@
 <template>
-  
   <div class="column">
     <div class="columns is-12 menu-top">
       Consultório - XYZ
@@ -12,21 +11,21 @@
         <aside class="menu">
           <p class="menu-label"> Agenda </p>
           <ul class="menu-list">
-            <li><router-link to="/agendamento">Agendamento</router-link></li>
-            <li><router-link to="/historico">Históricos</router-link></li>
+            <li><router-link to="/">Agendamento</router-link></li>
+            <li><router-link to="/">Históricos</router-link></li>
           </ul>
-      
+
           <p class="menu-label"> Pessoas </p>
           <ul class="menu-list">
-            <li><router-link to="/paciente">Paciente</router-link></li>
-            <li><router-link to="/medico">Médico</router-link></li>
-            <li><router-link to="/secretaria">Secretaria</router-link></li>
+            <li><router-link to="/paciente-list">Paciente</router-link></li>
+            <li><router-link to="/medico-list">Médicos</router-link></li>
+            <li><router-link to="/secretaria-list">Secretarias</router-link></li>
           </ul>
 
           <p class="menu-label"> Administração </p>
           <ul class="menu-list">
-            <li><router-link to="/especialidade">Especialidade</router-link></li>
-            <li><router-link to="/convenio">Convênio</router-link></li>
+            <li><router-link to="/especialidade-list">Especialidades</router-link></li>
+            <li><router-link to="/convenio-list">Convênios</router-link></li>
           </ul>
         </aside>
       </nav>
