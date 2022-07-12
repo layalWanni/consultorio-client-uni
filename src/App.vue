@@ -11,21 +11,21 @@
         <aside class="menu">
           <p class="menu-label"> Agenda </p>
           <ul class="menu-list">
-            <li><router-link to="/">Agendamento</router-link></li>
-            <li><router-link to="/">Históricos</router-link></li>
+            <li><router-link to="/agendamento">Agendamento</router-link></li>
+            <li><router-link to="/historico">Históricos</router-link></li>
           </ul>
 
           <p class="menu-label"> Pessoas </p>
           <ul class="menu-list">
-            <li><router-link to="/paciente-list">Paciente</router-link></li>
-            <li><router-link to="/medico-list">Médicos</router-link></li>
-            <li><router-link to="/secretaria-list">Secretarias</router-link></li>
+            <li><router-link to="/paciente/listar">Paciente</router-link></li>
+            <li><router-link to="/medico/listar">Medico</router-link></li>
+            <li><router-link to="/secretaria/listar">Secretaria</router-link></li>
           </ul>
 
           <p class="menu-label"> Administração </p>
           <ul class="menu-list">
-            <li><router-link to="/especialidade-list">Especialidades</router-link></li>
-            <li><router-link to="/convenio-list">Convênios</router-link></li>
+            <li><router-link to="/especialidade/listar">Especialidade</router-link></li>
+            <li><router-link to="/convenio/listar">Convênio</router-link></li>
           </ul>
         </aside>
       </nav>

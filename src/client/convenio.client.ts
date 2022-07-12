@@ -10,8 +10,8 @@ export class ConvenioClient {
 
     constructor() {
         this.axiosClient = axios.create({
-            baseURL: 'http://localhost:8080/api/convenio',
-            headers: {'Content-type' : 'application/json'}
+            baseURL: 'http://localhost:8080/api/convenios',
+            headers: {'Content-type': 'application/json'}
         });
     }
 
@@ -22,8 +22,7 @@ export class ConvenioClient {
             return Promise.reject(error.response)
         }
     }
-
-    public async findByFiltrosPaginado(pageRequest : PageRequest): Promise<PageResponse<Convenio>> {
+	public async findByFiltrosPaginado(pageRequest: PageRequest): Promise<PageResponse<Convenio>> {
         try {
 
             let requestPath = ''
@@ -35,7 +34,7 @@ export class ConvenioClient {
 
             return (await this.axiosClient.get<PageResponse<Convenio>>(requestPath,
                 {
-                    params: { filtros: pageRequest.filter }
+                    params: {filtros: pageRequest.filter}
                 }
             )).data
         } catch (error: any) {
