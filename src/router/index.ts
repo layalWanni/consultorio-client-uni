@@ -54,7 +54,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/paciente/form/:model/:id',
     name: 'paciente-detalhar',
     props: (router) => ({ id: router.params.id, model: router.params.model }),
-    component: () => import(/* webpackChunkName: "list" */ '../views/secretaria/secretaria-form.vue')
+    component: () => import(/* webpackChunkName: "list" */ '../views/paciente/paciente-form.vue')
   },
   {
     path: '/secretaria/listar',
@@ -88,6 +88,52 @@ const routes: Array<RouteRecordRaw> = [
     props: (router) => ({ id: router.params.id, model: router.params.model }),
     component: () => import(/* webpackChunkName: "list" */ '../views/medico/medico-form.vue')
   },
+  {
+    path: '/cadastroagenda',
+    name: 'cadastroagenda',
+    component: () => import('../views/agenda/cadastrar-agenda.vue')
+
+  },
+  {
+    path: '/agenda-list',
+    name: 'agenda-list',
+    component: () => import('../views/agenda/agenda-list.vue')
+
+  },
+  {
+    path: '/agenda-cadastrar/:model/:id',
+    name: 'agenda-detalhar',
+    props: (router) => ({ id: router.params.id, model: router.params.model }),
+    component: () => import('../views/agenda/cadastrar-agenda.vue')
+  },
+  {
+    path: '/agenda-cadastrar/:model/:id',
+    name: 'agenda-editar',
+    props: (router) => ({ id: router.params.id, model: router.params.model }),
+    component: () => import('../views/agenda/cadastrar-agenda.vue')
+  },
+  {
+    path: '/agenda-cadastrar',
+    name: 'agenda-paciente',
+    component: () => import('../views/agenda/cadastrar-agenda.vue')
+  },
+
+  // {
+  //   path: '/agenda/listar',
+  //   name: 'agenda-listar',
+  //   component: () => import(/* webpackChunkName: "list" */ '../views/agenda/agenda-list.vue')
+  // },
+  // {
+  //   path: '/agenda/form',
+  //   name: 'agenda-form',
+  //   component: () => import(/* webpackChunkName: "list" */ '../views/agenda/cadastrar-agenda.vue')
+  // },
+  // {
+  //   path: '/agenda/form/:model/:id',
+  //   name: 'agenda-detalhar',
+  //   props: (router) => ({ id: router.params.id, model: router.params.model }),
+  //   component: () => import(/* webpackChunkName: "list" */ '../views/agenda/cadastrar-agenda.vue')
+  // },
 
   {
     path: '/about',

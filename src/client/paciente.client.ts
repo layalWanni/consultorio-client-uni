@@ -10,7 +10,7 @@ export class PacienteClient {
 
     constructor() {
         this.axiosClient = axios.create({
-            baseURL: 'http://localhost:8080/api/paciente',
+            baseURL: 'http://localhost:8080/api/pacientes',
             headers: {'Content-type' : 'application/json'}
         });
     }

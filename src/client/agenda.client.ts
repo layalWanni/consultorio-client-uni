@@ -9,7 +9,7 @@ export class AgendaClient {
 
     constructor() {
         this.axiosClient = axios.create({
-            baseURL: 'http://localhost:8080/api/agenda',
+            baseURL: 'http://localhost:8080/api/agendas',
             headers: {'Content-type' : 'application/json'}
         });
     }
@@ -17,7 +17,7 @@ export class AgendaClient {
     public async findById(id: number): Promise<Agenda> {
         try {
             return (await this.axiosClient.get<Agenda>(`/${id}`)).data
-        } catch (error: any) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }
@@ -37,7 +37,7 @@ export class AgendaClient {
                     params: { filtros: pageRequest.filter }
                 }
             )).data
-        } catch (error: any) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }
@@ -45,7 +45,7 @@ export class AgendaClient {
     public async cadastrar(agenda: Agenda): Promise<void> {
         try {
             return (await this.axiosClient.post('/', agenda))
-        } catch (error: any) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }
@@ -53,7 +53,7 @@ export class AgendaClient {
     public async editar(agenda: Agenda): Promise<void> {
         try {
             return (await this.axiosClient.put(`/${agenda.id}`, agenda)).data
-        } catch (error: any) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }
@@ -61,7 +61,7 @@ export class AgendaClient {
     public async desativar(agenda: Agenda): Promise<void> {
         try {
             return (await this.axiosClient.put(`/desativar/${agenda.id}`, agenda)).data
-        } catch (error: any) {
+        } catch (error:any) {
             return Promise.reject(error.response)
         }
     }

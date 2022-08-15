@@ -1,55 +1,55 @@
 <template>
-    <article class="panel is-info">
-        <p class="panel-heading">
-            LISTA DE CONVÊNIOS
-        </p>
-        <div class="panel-block">
-            <p class="control has-icons-left">
-                <input class="input is-info" type="text" placeholder="Search">
-                <span class="icon is-left">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                </span>
-            </p>
-        </div>
-    </article>
-
-    <div class="buttonCadastrar">
-        <router-link to="/convenio/form">
-            <button class="button is-responsive is-rounded is-info is-light">
-                Cadastrar novo Convênio
-            </button>
-        </router-link>
+  <article class="panel is-info">
+    <p class="panel-heading">
+      LISTA DE CONVÊNIOS
+    </p>
+    <div class="panel-block">
+      <p class="control has-icons-left">
+        <input class="input is-info" type="text" placeholder="Search">
+        <span class="icon is-left">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </span>
+      </p>
     </div>
+  </article>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Ativo</th>
-                <th>Nome</th>
-                <th>Valor</th>
-                <th>Opções</th>
-            </tr>
-        </thead>
+  <div class="buttonCadastrar">
+    <router-link to="/convenio/form">
+      <button class="button is-responsive is-rounded is-info is-light">
+        Cadastrar novo Convênio
+      </button>
+    </router-link>
+  </div>
 
-        <tbody>
-            <tr v-for="item in conveniosList" :key="item.id">
-                <th>{{ item.id }}</th>
-                <th>
-                    <span v-if="item.ativo == true" class="tag is-success"> Ativo </span>
-                    <span v-if="!item.ativo" class="tag is-danger"> Inativo </span>
-                </th>
-                <th>{{ item.nome }}</th>
-                <th>{{ item.valor }}</th>
-                <th>
-                    <button @click="onClickPaginaDetalhar(item.id)" class="button is-small is-warning">
-                        Detalhar
-                    </button>
-                </th>
-            </tr>
-        </tbody>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Ativo</th>
+      <th>Nome</th>
+      <th>Valor</th>
+      <th>Opções</th>
+    </tr>
+    </thead>
 
-    </table>
+    <tbody>
+    <tr v-for="item in conveniosList" :key="item.id">
+      <th>{{ item.id }}</th>
+      <th>
+        <span v-if="item.ativo == true" class="tag is-success"> Ativo </span>
+        <span v-if="!item.ativo" class="tag is-danger"> Inativo </span>
+      </th>
+      <th>{{ item.nome }}</th>
+      <th>{{ item.valor }}</th>
+      <th>
+        <button @click="onClickPaginaDetalhar(item.id)" class="button is-small is-info is-outlined">
+          Detalhar
+        </button>
+      </th>
+    </tr>
+    </tbody>
+
+  </table>
 
 </template>
 
@@ -63,29 +63,29 @@ import { PageResponse } from '@/model/page/page-response'
 
 export default class ConvenioList extends Vue {
 
-    pageRequest: PageRequest = new PageRequest()
-    pageResponse: PageResponse<Convenio> = new PageResponse()
+  pageRequest: PageRequest = new PageRequest()
+  pageResponse: PageResponse<Convenio> = new PageResponse()
 
-    conveniosList: Convenio[] = []
-    convenioClient!: ConvenioClient
+  conveniosList: Convenio[] = []
+  convenioClient!: ConvenioClient
 
-    public mounted(): void {
-        this.convenioClient = new ConvenioClient()
-        this.listarConvenios()
-    }
-    private listarConvenios(): void {
-        this.convenioClient.findByFiltrosPaginado(this.pageRequest)
-            .then(
-                success => {
-                    this.pageResponse = success
-                    this.conveniosList = this.pageResponse.content
-                },
-                error => console.log(error)
-            )
-    }
-    onClickPaginaDetalhar(idConvenio: number) {
-        this.$router.push({ name: 'convenio-detalhar', params: { id: idConvenio, model: 'detalhar' } })
-    }
+  public mounted(): void {
+    this.convenioClient = new ConvenioClient()
+    this.listarConvenios()
+  }
+  private listarConvenios(): void {
+    this.convenioClient.findByFiltrosPaginado(this.pageRequest)
+        .then(
+            success => {
+              this.pageResponse = success
+              this.conveniosList = this.pageResponse.content
+            },
+            error => console.log(error)
+        )
+  }
+  onClickPaginaDetalhar(idConvenio: number) {
+    this.$router.push({ name: 'convenio-detalhar', params: { id: idConvenio, model: 'detalhar' } })
+  }
 }
 
 </script>
@@ -93,6 +93,6 @@ export default class ConvenioList extends Vue {
 
 <style>
 .buttonCadastrar {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 </style>

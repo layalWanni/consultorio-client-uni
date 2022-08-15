@@ -13,4 +13,14 @@ export class Agenda extends AbstractEntity{
     paciente! : Paciente
     secretaria! : Secretaria
     medico! : Medico
+
+
+    constructor() {
+        super()
+        this.paciente = new Paciente()
+        this.secretaria = new Secretaria()
+        this.medico = new Medico()
+        this.encaixe = false
+        this.ativo = true
+    }
 }

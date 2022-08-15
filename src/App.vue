@@ -11,7 +11,7 @@
         <aside class="menu">
           <p class="menu-label"> Agenda </p>
           <ul class="menu-list">
-            <li><router-link to="/agendamento">Agendamento</router-link></li>
+            <li><router-link to="/agenda-list">Agendamento</router-link></li>
             <li><router-link to="/historico">Históricos</router-link></li>
           </ul>
 

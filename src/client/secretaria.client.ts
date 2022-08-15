@@ -9,7 +9,7 @@ export class SecretariaClient {
 
     constructor() {
         this.axiosClient = axios.create({
-            baseURL: 'http://localhost:8080/api/secretaria',
+            baseURL: 'http://localhost:8080/api/secretarias',
             headers: {'Content-type' : 'application/json'}
         });
     }

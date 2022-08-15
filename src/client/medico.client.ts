@@ -4,13 +4,12 @@ import axios, { AxiosInstance } from "axios";
 import {Medico} from "../model/medico.model";
 
 export class MedicoClient {
-
     private axiosClient: AxiosInstance;
 
     constructor() {
         this.axiosClient = axios.create({
-            baseURL: 'http://localhost:8080/api/medico',
-            headers: {'Content-type' : 'application/json'}
+            baseURL: 'http://localhost:8080/api/medicos',
+            headers: {'Content-type': 'application/json'}
         });
     }
 
@@ -22,7 +21,7 @@ export class MedicoClient {
         }
     }
 
-    public async findByFiltrosPaginado(pageRequest : PageRequest): Promise<PageResponse<Medico>> {
+    public async findByFiltrosPaginado(pageRequest: PageRequest): Promise<PageResponse<Medico>> {
         try {
 
             let requestPath = ''
@@ -34,7 +33,7 @@ export class MedicoClient {
 
             return (await this.axiosClient.get<PageResponse<Medico>>(requestPath,
                 {
-                    params: { filtros: pageRequest.filter }
+                    params: {filtros: pageRequest.filter}
                 }
             )).data
         } catch (error: any) {
